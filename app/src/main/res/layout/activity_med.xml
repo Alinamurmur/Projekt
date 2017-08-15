@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White">
+
+
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/PrimaryDarkColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:id="@+id/title_article"/>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:id="@+id/img_article"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/text_article"/>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/returnToSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                card_view:cardCornerRadius="5dp"
+                card_view:contentPadding="10dp"
+                android:translationZ="3dp"
+                android:layout_margin="10dp"
+
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Переход в раздел"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textColor="@color/Black"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    />
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
+
+
