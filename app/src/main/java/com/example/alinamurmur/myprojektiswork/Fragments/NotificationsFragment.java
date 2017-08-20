@@ -16,10 +16,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.alinamurmur.myprojektiswork.Interfaces.eventListener;
 import com.example.alinamurmur.myprojektiswork.MainActivity;
 import com.example.alinamurmur.myprojektiswork.R;
 
 public class NotificationsFragment extends Fragment implements  AdapterView.OnItemClickListener {
+    eventListener someEventListener;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -44,6 +47,10 @@ public class NotificationsFragment extends Fragment implements  AdapterView.OnIt
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+        someEventListener.onEventSelected("Событие "+(i+1));
+
+      /**
         Context context = getActivity();
 
         Intent notificationIntent = new Intent(context, MainActivity.class);
@@ -65,6 +72,17 @@ public class NotificationsFragment extends Fragment implements  AdapterView.OnIt
 
         NotificationManager notificationManager1 = ( NotificationManager ) getActivity().getSystemService( getActivity().NOTIFICATION_SERVICE );
         notificationManager1.notify(1, notification);
+       **/
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        try {
+            someEventListener = (eventListener) context;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(context.toString() + " must implement onSomeEventListener");
+        }
     }
 }
 

@@ -21,6 +21,7 @@ import com.example.alinamurmur.myprojektiswork.Fragments.ArticleFragment;
 import com.example.alinamurmur.myprojektiswork.Fragments.CalendarFragment;
 import com.example.alinamurmur.myprojektiswork.Fragments.CalendarMonthFragment;
 import com.example.alinamurmur.myprojektiswork.Fragments.ContactsFragment;
+import com.example.alinamurmur.myprojektiswork.Fragments.DataFragment;
 import com.example.alinamurmur.myprojektiswork.Fragments.DiscountFragment;
 import com.example.alinamurmur.myprojektiswork.Fragments.DiscountsFragment;
 import com.example.alinamurmur.myprojektiswork.Fragments.FragmentScroll;
@@ -249,6 +250,11 @@ public class MainActivity extends AppCompatActivity
 
     public void onDiscountSelected (String title) {
         tempFragment = DiscountFragment.newInstance(title);
+        replaceFragment(tempFragment, tempFragmTran);
+    }
+
+    public void onEventSelected (String title) {
+        tempFragment = DataFragment.newInstance(title);
         replaceFragment(tempFragment, tempFragmTran);
     }
 

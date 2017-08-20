@@ -38,7 +38,7 @@ public class DiscountsFragment extends Fragment implements AdapterView.OnItemCli
         ListView listView = (ListView) view.findViewById(R.id.list);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),R.layout.item_list,names);
         listView.setAdapter(adapter);
-      listView.setOnItemClickListener(this);
+        listView.setOnItemClickListener(this);
         return view;
     }
 

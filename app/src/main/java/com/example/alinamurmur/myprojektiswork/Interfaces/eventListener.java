@@ -9,6 +9,7 @@ public interface eventListener {
     void onReturnToSection (int section);
     void someEvent(int i);
     void onDiscountSelected (String title);
+    void onEventSelected (String title);
     void onMonthSelected(String month);
     void onArticleSelected(String title, int id, int section);
 
